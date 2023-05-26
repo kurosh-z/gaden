@@ -1,0 +1,5 @@
+<launch>
+
+<node pkg="sensor_tf" type="sensor_tf_server.py" name="sensor_tf_server" output="screen"/>
+   
+</launch>

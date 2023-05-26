@@ -4,6 +4,9 @@
 
 <launch>
     <arg name="scenario" default="10x6_central_obstacle" />
+    <!-- <arg name="simulation" default="05ms" /> -->
+    <arg name="simulation" default="w0" />
+
     
     <node pkg="gaden_preprocessing" type="preprocessing" name="preprocessing" output="screen" >
 
@@ -28,7 +31,7 @@
         <param name="worldFile" value="$(find test_env)/$(arg scenario)/launch/ros/stage.world"/>      ### leave empty if you dont want it to be automatically modified
 
         #Wind Data (the node will append _i.csv to the name that is specified here)
-        <param name="wind_files" value="$(find test_env)/$(arg scenario)/wind_simulations/1ms/wind_at_cell_centers"/>
+        <param name="wind_files" value="$(find test_env)/$(arg scenario)/wind_simulations/$(arg simulation)/wind_at_cell_centers"/>
 
         #Where to write the output files
         <param name="output_path" value="$(find test_env)/$(arg scenario)" />

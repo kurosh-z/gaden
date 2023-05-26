@@ -4,7 +4,9 @@
 
 <launch>
     <arg name="scenario" default="10x6_central_obstacle" />
-    <arg name="simulation" default="05ms" />
+    <!-- <arg name="simulation" default="05ms" /> -->
+    <arg name="simulation" default="w0" />
+
     <arg name="source_location_x" default="0.50" />
     <arg name="source_location_y" default="3.00" />
     <arg name="source_location_z" default="0.50" />
@@ -47,7 +49,7 @@
     <node pkg="gaden_filament_simulator" type="filament_simulator" name="filament_simulator" output="screen">
         <param name="verbose" value="false" />
         <param name="wait_preprocessing" value="false"/>    	 ### wait for the ok from preprocessing before starting the simulation
-	    <param name="sim_time" value="300" />                    ### [sec] Total time of the gas dispersion simulation
+	    <param name="sim_time" value="3000" />                    ### [sec] Total time of the gas dispersion simulation
 	    <param name="time_step" value="0.1" />                   ### [sec] Time increment between snapshots. Set aprox = cell_size/max_wind_speed.
 	    <param name="num_filaments_sec" value="10" />            ### Num of filaments released each second
 	    <param name="variable_rate" value="true" />              ### If true the number of released filaments would be random(0,numFilaments_sec)

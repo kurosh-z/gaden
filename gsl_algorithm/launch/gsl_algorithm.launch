@@ -1,0 +1,5 @@
+<launch>
+
+<node pkg="gsl_algorithm" type="gsl_algorithm_node.py" name="gsl_algorithm_node" output="screen"/>
+   
+</launch>

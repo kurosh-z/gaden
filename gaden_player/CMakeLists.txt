@@ -4,7 +4,7 @@ project(gaden_player)
 set(CMAKE_CXX_FLAGS "-lboost_iostreams -std=c++11 ${CMAKE_CXX_FLAGS}")
 
 set(DEBUG OFF)
-
+set(OpenCV_DIR /usr/lib/aarch64-linux-gnu/cmake/opencv4)
 if(DEBUG)
   add_definitions(-DDEBUG)
   set(CMAKE_CXX_FLAGS "-g ${CMAKE_CXX_FLAGS}")
